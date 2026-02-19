@@ -22,20 +22,19 @@ public class PostOrderTraversalIterative {
     }
 
     private static void postOrderIterative(BSTNode root) {
-        Stack<BSTNode> firstStack=new Stack<>();
-        Stack<BSTNode> secondStack=new Stack<>();
+        Stack<BSTNode> firstStack = new Stack<>();
+        Stack<BSTNode> secondStack = new Stack<>();
 
         firstStack.push(root);
-        while(!firstStack.isEmpty()){
-            BSTNode itemPopped=firstStack.pop();
+        while (!firstStack.isEmpty()) {
+            BSTNode itemPopped = firstStack.pop();
             secondStack.push(itemPopped);
-            if(itemPopped.left!=null)
-                firstStack.push(itemPopped.left);
-            if(itemPopped.right!=null)
-                firstStack.push(itemPopped.right);
+            if (itemPopped.left != null) firstStack.push(itemPopped.left);
+            if (itemPopped.right != null) firstStack.push(itemPopped.right);
         }
-        while(!secondStack.isEmpty()){
-            System.out.print(secondStack.pop().data+" ");
+        while (!secondStack.isEmpty()) {
+            System.out.print(secondStack.pop().data + " ");
+
         }
     }
 }
