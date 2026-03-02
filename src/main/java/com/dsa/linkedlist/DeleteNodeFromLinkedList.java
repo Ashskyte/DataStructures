@@ -27,8 +27,6 @@ public class DeleteNodeFromLinkedList {
         int counter = 1;
         //in this if we have not given the head of linkedlist only given that which node to be deleted
         //in this case we can do is once we reach the node to be deleted , we can copy its immediate next node data to it and then assign the next pointer to next.next
-
-
         Node current = head;
         while (current != null) {
             if (counter == i && current.next != null) {
